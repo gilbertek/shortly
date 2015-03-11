@@ -1,5 +1,6 @@
 require 'rubygems'
 require 'bundler'
+require 'byebug'
 
 Bundler.require # Load the needed gems from the gemfile.
 
@@ -30,7 +31,17 @@ class App < Sinatra::Base
 
   post "/" do
     @link = Url.create(:link => params[:link])
-    format_url(@link.id.to_s)
+    format_url(@link.short_link.to_s)
+  end
+
+  get '/:short_link' do
+    @link = Url.find(params[:short_link])
+    @link.update_clicks
+    redirect @link.link
+  end
+
+  get '/:top_link' do
+    byebug
   end
 
   def format_url(slug)

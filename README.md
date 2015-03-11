@@ -19,6 +19,7 @@ Use the light wright Sinatra framework and Postgresql.
 Deployable on heroku
 
 # How you came up with the short URL scheme
-
+Using randomize strings 36 to the power of 5
 
 # Future improvements you would make with more time
+Need to add validations

@@ -1,8 +1,7 @@
-ENV['RACK_ENV'] = 'test'
+ENV['RACK_ENV'] = 'development'
 
 require File.join(File.dirname(__FILE__), '../app/', 'app.rb')
 require 'rack/test'
-require 'shoulda-matchers'
 
 def app
   App

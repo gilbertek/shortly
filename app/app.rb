@@ -30,8 +30,15 @@ class App < Sinatra::Base
   end
 
   post "/" do
+    return 400 unless params["link"].present?
+
     @link = Url.create(:link => params[:link])
     format_url(@link.short_link.to_s)
+  end
+
+  get '/top_links' do
+    links = Url.get_top_views
+    erb :top_links, locals: {top_links: links}
   end
 
   get '/:short_link' do
@@ -40,9 +47,7 @@ class App < Sinatra::Base
     redirect @link.link
   end
 
-  get '/:top_link' do
-    byebug
-  end
+
 
   def format_url(slug)
     return url + slug.to_s

@@ -1,3 +1,4 @@
+require 'byebug'
 class Url < ActiveRecord::Base
   validates_presence_of :link
 
@@ -11,5 +12,9 @@ class Url < ActiveRecord::Base
   def update_clicks
     self.clicks += 1
     self.save!
+  end
+
+  def self.get_top_views
+    self.order(clicks: :desc).take(100)
   end
 end

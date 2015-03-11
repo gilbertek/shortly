@@ -6,8 +6,11 @@ gem 'sinatra'
 gem 'json'
 gem 'activesupport'
 gem 'sinatra-activerecord'
+
 # Database
 gem 'pg'
+
+gem 'capistrano'
 
 group :development, :test do
   gem 'sqlite3'

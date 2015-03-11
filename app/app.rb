@@ -1,6 +1,5 @@
 require 'rubygems'
 require 'bundler'
-require 'byebug'
 
 Bundler.require # Load the needed gems from the gemfile.
 
@@ -31,7 +30,6 @@ class App < Sinatra::Base
 
   post "/" do
     return 400 unless params["link"].present?
-
     @link = Url.create(:link => params[:link])
     format_url(@link.short_link.to_s)
   end
@@ -42,7 +40,7 @@ class App < Sinatra::Base
   end
 
   get '/:short_link' do
-    @link = Url.find_by_short_link(params[:short_link])
+    @link = Url.find_by(short_link: params[:short_link])
     @link.update_clicks
     redirect @link.link
   end

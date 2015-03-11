@@ -19,7 +19,6 @@ Use the light wright Sinatra framework and Postgresql.
 Deployable on heroku
 
 # How you came up with the short URL scheme
-The first iteration just return the primary key as string to the user.
+
 
 # Future improvements you would make with more time
-Work on generating a more valid short url

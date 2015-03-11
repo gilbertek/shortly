@@ -42,7 +42,7 @@ class App < Sinatra::Base
   end
 
   get '/:short_link' do
-    @link = Url.find(params[:short_link])
+    @link = Url.find_by_short_link(params[:short_link])
     @link.update_clicks
     redirect @link.link
   end

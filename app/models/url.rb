@@ -5,7 +5,7 @@ class Url < ActiveRecord::Base
   after_create :generate_short_url
 
   def generate_short_url
-    self.short_link = self.id.to_s(6)
+    self.short_link = rand(36**5).to_s(36)
     self.save!
   end
 

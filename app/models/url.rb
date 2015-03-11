@@ -1,4 +1,3 @@
-require 'byebug'
 class Url < ActiveRecord::Base
   validates_presence_of :link
 

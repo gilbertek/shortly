@@ -4,7 +4,6 @@ require 'byebug'
 
 Bundler.require # Load the needed gems from the gemfile.
 
-$: << File.expand_path('../', __FILE__) # Required so that Sinatra knows where to find all the routes and such.
 Dir[File.dirname(__FILE__) + '/models/*.rb'].each {|file| require file }
 
 class App < Sinatra::Base

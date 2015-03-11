@@ -1,6 +1,5 @@
 require 'rubygems'
 require 'bundler'
-require 'byebug'
 
 Bundler.require # Load the needed gems from the gemfile.
 

@@ -6,13 +6,10 @@ gem 'sinatra'
 gem 'json'
 gem 'activesupport'
 gem 'sinatra-activerecord'
-
-# Database
 gem 'pg'
 
-gem 'capistrano'
-
 group :development, :test do
+  gem 'capistrano'
   gem 'sqlite3'
   gem 'byebug'
   gem 'pry'

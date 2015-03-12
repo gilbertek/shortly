@@ -22,4 +22,4 @@ Deployable on heroku
 Using randomize strings 36 to the power of 5
 
 # Future improvements you would make with more time
-Need to add validations
+Add validations

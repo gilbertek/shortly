@@ -75,9 +75,9 @@ GEM
       colorize (>= 0.7.0)
       net-scp (>= 1.1.2)
       net-ssh (>= 2.8.0)
-    thread_safe (0.3.4)
+    thread_safe (0.3.6)
     tilt (1.4.1)
-    tzinfo (1.2.2)
+    tzinfo (1.2.10)
       thread_safe (~> 0.1)
 
 PLATFORMS
